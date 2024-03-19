@@ -1,0 +1,70 @@
+@font-face {
+    font-family: "FuentePrincipal";
+    src: url("../../../public/HeliosRegular.ttf");
+  }
+
+.containerHomePage{
+    background-color: #E7E7E7;
+    padding: 4vh 2vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.containerSearch{
+    background-color: #FCF9F9;
+    color: #322F30;
+    font-family: "FuentePrincipal", sans-serif;
+    width: 75vw;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.containerSearch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+.containerTitleSearch{
+    width: 74vw;
+}
+
+.containerMemberList{
+    background-color: #FCF9F9;
+    color: #322F30;
+    font-family: "FuentePrincipal", sans-serif;
+    width: 75vw;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.search {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    height: 5vh;
+    width: 74vw;
+    display: flex;
+    margin: 1vh;
+  }
+  
+  .search input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    padding: 5px;
+  }
+  
+  .search button {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #322F30;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .search button:hover {
+    background-color: #7ed957;
+  }
