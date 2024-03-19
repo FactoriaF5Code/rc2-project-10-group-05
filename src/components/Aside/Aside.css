@@ -1,0 +1,38 @@
+ul {
+  list-style-type: none;
+}
+
+.containerAside {
+  width: 20vw;
+  height: 100vh;
+  background-color: aliceblue;
+  color: #322f30;
+}
+
+.containerLogo {
+    display: flex;
+    justify-content: center;
+  margin: 0 auto;
+}
+
+.logo{
+    width: 80%;
+}
+
+.containerListAside {
+  margin-top: 20px;
+}
+
+.textList {
+  font-size: 30px;
+  text-align: center;
+  margin: 20px;
+  width: 90%;
+}
+
+.textList:hover {
+  background-color: #7ed957;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px 3px rgba(126,217,87,1)
+}
+
