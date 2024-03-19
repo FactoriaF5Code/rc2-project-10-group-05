@@ -1,0 +1,11 @@
+.memberList {
+  display: flex;
+  align-items: center;
+  gap: 18rem;
+  width: 75vw;
+  height: 2rem;
+}
+
+.memberList p {
+  color: #322f30;
+}

@@ -1,0 +1,12 @@
+.listItems {
+  display: flex;
+  align-items: center;
+  gap: 15rem;
+  width: 75vw;
+  height: 2rem;
+}
+
+.listItems p {
+  color: #322f30;
+  font-family: "Headland One", serif;
+}
