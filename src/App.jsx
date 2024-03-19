@@ -1,4 +1,5 @@
 import Aside from "./components/Aside/Aside.jsx"
+import HomePage from "./pages/homepage/HomePage.jsx"
 import './App.css'
 
 function App() {
@@ -6,12 +7,10 @@ function App() {
 
   return (
     <>
-      <div className='ContainerAllPage'>
+    <div className="containerCompletPage">
         <Aside />
-        <div>
-          <h1>Pagina</h1>
+        <HomePage />
         </div>
-      </div>
     </>
   )
 }

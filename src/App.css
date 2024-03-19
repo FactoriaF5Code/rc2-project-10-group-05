@@ -7,9 +7,14 @@
   outline: none;
 }
 
-.ContainerAllPage {
+.containerCompletPage {
   display: flex;
   flex-direction: row;
+
+}
+
+.page{
+  background-color: #E7E7E7;
 }
 
 
