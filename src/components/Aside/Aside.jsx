@@ -10,9 +10,15 @@ function Aside() {
                 </div>
                 <div className="containerListAside">
                     <ul className="listAside">
-                        <li className="textList">Miembros</li>
-                        <li className="textList">Calendario Actividades</li>
-                        <li className="textList">Actividades</li>
+                        <li className="textList">
+                            <a href="HomePage.jsx" style={{ textDecoration: "none" }}>Miembros</a>
+                        </li>
+                        <li className="textList">
+                            <a href="HomePage.jsx" style={{ textDecoration: "none" }}>Calendario de Actividades</a>
+                        </li>
+                        <li className="textList">
+                            <a href="HomePage.jsx" style={{ textDecoration: "none" }}>Actividades</a>
+                        </li>
                     </ul>
                 </div>
             </section>

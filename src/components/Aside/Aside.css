@@ -30,9 +30,15 @@ ul {
   width: 90%;
 }
 
+.listAside a {
+    text-decoration: none !important; 
+  }
+  
+
 .textList:hover {
   background-color: #7ed957;
   border-radius: 15px;
   box-shadow: 0px 0px 10px 3px rgba(126,217,87,1)
+
 }
 

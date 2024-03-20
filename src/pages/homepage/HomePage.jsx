@@ -15,6 +15,7 @@ function HomePage() {
                 </section>
                 <section className="containerMemberList">
                     <h2>Listado de todos los Miembros</h2>
+                    <button className="buttonAddMember">Añadir</button>
                 </section>
             </div>
         </>
