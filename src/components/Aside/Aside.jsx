@@ -1,5 +1,8 @@
 import "./Aside.css";
 import logo from "../../../public/logo.png";
+import { Link } from "react-router-dom";
+
+
 
 function Aside() {
     return (
@@ -11,14 +14,13 @@ function Aside() {
                 <div className="containerListAside">
                     <ul className="listAside">
                         <li className="textList">
-                            <a href="HomePage.jsx" style={{ textDecoration: "none" }}>Miembros</a>
+                            <Link to="/">Miembros</Link>
                         </li>
+
                         <li className="textList">
-                            <a href="HomePage.jsx" style={{ textDecoration: "none" }}>Calendario de Actividades</a>
+                            <Link to="/ListActivities">Actividades</Link>
                         </li>
-                        <li className="textList">
-                            <a href="HomePage.jsx" style={{ textDecoration: "none" }}>Actividades</a>
-                        </li>
+
                     </ul>
                 </div>
             </section>
