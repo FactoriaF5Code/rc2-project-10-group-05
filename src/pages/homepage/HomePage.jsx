@@ -10,7 +10,7 @@ function HomePage() {
                     <div className="containerTitleSearch">
                     <h2>Buscador de Miembros por Nombre</h2>
                     </div>
-                    <form class="search">
+                    <form className="search">
                         <input type="text" placeholder="Buscar..." />
                         <button type="submit">Buscar</button>
                     </form>
