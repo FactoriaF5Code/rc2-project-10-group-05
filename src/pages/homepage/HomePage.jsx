@@ -1,4 +1,6 @@
 import "./HomePage.css";
+import ListMember from "../../components/ListMember/ListMember"
+
 
 function HomePage() {
     return (
@@ -17,6 +19,7 @@ function HomePage() {
                     <h2>Listado de todos los Miembros</h2>
                     <button className="buttonAddMember">Añadir</button>
                 </section>
+                <ListMember />
             </div>
         </>
     )

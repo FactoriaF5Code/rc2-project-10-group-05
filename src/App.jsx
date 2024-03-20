@@ -9,7 +9,7 @@ function App() {
     <>
     <div className="containerCompletPage">
         <Aside />
-        <HomePage />
+        <HomePage />       
         </div>
     </>
   )
