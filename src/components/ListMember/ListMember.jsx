@@ -1,4 +1,4 @@
-import * as React from 'react';
+// import * as React from 'react';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -16,7 +16,7 @@ const rows = [
   createData('Marta', 'Sanchez', '684456565', 4.0),
   createData('David', 'Fernandez', '684656565', 4.0),
   createData('Jorge', 'Perez', '6846s6565', 4.0),
-  createData('Oliver', 'Sanchez', '684656565', 4.0),
+  // createData('Oliver', 'Sanchez', '684656565', 4.0),
 ];
 
 export default function ListMember() {

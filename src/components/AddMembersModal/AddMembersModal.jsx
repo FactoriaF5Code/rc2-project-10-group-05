@@ -1,46 +1,34 @@
 import "./AddMembersModal.css";
-import cross from "../../assets/cross.png"
-// import { useState } from "react";
+import cross from "../../assets/cross.png";
 
-export default function AddMembersModal() {
-    // const [addMember, setAddMember] = useState(null);
-
-    // const openModal = (Member) => {
-    //   setAddMember(Member);
-    // };
-  
-    // const closeModal = () => {
-    //   setAddMember(null);
-    // };
-
+export default function AddMembersModal(onClose) {
   return (
     <>
       <section className="overlay">
         <section className="contenedorModal">
           <div className="contenedorModal__content">
             <div className="contenedorButton__cerrar">
-              <img
-                className="cerrarModal"
-                onClick={onclose}
-                src={cross}
-                alt="x"
-              />
+              <button className="cerrarModal" onClick={onClose}>
+                <img src={cross} alt="x" />
+              </button>
             </div>
             <div className="contenedorInformación">
-              <div>
-                <h2>Title</h2>
-                <p>hola</p>
+              <div className="pAñadir">
+                <p>AÑADIR MIEMBRO</p>
               </div>
               <div>
-                <h2>Member</h2>
-                <p>hola</p>
+                <input type="text" placeholder="Nombre" />
               </div>
               <div>
-                <h2>Member</h2>
-                <p>hola</p>
+                <input type="text" placeholder="Apellido" />
               </div>
               <div>
-                <button className="ReturnButton">FINALIZAR</button>
+                <input type="text" placeholder="Contacto" />
+              </div>
+              <div>
+                <button className="finalizarButton">
+                  FINALIZAR
+                </button>
               </div>
             </div>
           </div>

@@ -1,5 +1,6 @@
 import "./HomePage.css";
 import ListMember from "../../components/ListMember/ListMember"
+import ButtonAddMember from "../../components/AddUser/ButtonAddMember";
 
 
 function HomePage() {
@@ -17,7 +18,7 @@ function HomePage() {
                 </section>
                 <section className="containerMemberList">
                     <h2>Listado de todos los Miembros</h2>
-                    <button className="buttonAddMember">Añadir</button>
+                    <ButtonAddMember/>
                 </section>
                 <ListMember />
             </div>
