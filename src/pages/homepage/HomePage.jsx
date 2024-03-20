@@ -1,4 +1,6 @@
 import "./HomePage.css";
+import ListMember from "../../components/ListMember/ListMember"
+
 
 function HomePage() {
     return (
@@ -8,7 +10,7 @@ function HomePage() {
                     <div className="containerTitleSearch">
                     <h2>Buscador de Miembros por Nombre</h2>
                     </div>
-                    <form class="search">
+                    <form className="search">
                         <input type="text" placeholder="Buscar..." />
                         <button type="submit">Buscar</button>
                     </form>
@@ -17,6 +19,7 @@ function HomePage() {
                     <h2>Listado de todos los Miembros</h2>
                     <button className="buttonAddMember">Añadir</button>
                 </section>
+                <ListMember />
             </div>
         </>
     )
