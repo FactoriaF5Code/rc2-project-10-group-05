@@ -1,4 +1,4 @@
-// import * as React from 'react';
+import * as React from 'react';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -7,15 +7,15 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
-function createData(name, lastname, contact, perfil) {
-  return { name, lastname, contact, perfil };
+function createData(name, day, members, check) {
+  return { name, day, members, check };
 }
 
 const rows = [
-  createData('Oliver', 'Sanchez', '684656565', 4.0),
-  createData('Marta', 'Sanchez', '684456565', 4.0),
-  createData('David', 'Fernandez', '684656565', 4.0),
-  createData('Jorge', 'Perez', '6846s6565', 4.0),
+  createData('Pilates', 'Lunes', 8, 4.0),
+  createData('Spinning', 'Martes', 5, 4.0),
+  createData('CrossFit', 'Miercoles y Viernes', 10, 4.0),
+  createData('Yoga', 'Jueves', 1, 4.0),
 ];
 
 export default function ListMember() {
@@ -24,10 +24,10 @@ export default function ListMember() {
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell >NOMBRE</TableCell>
-            <TableCell align="right">APELLIDO</TableCell>
-            <TableCell align="right">CONTACTO</TableCell>
-            <TableCell align="right">IR A PERFIL</TableCell>
+            <TableCell >ACTIVIDAD</TableCell>
+            <TableCell align="right">DIA SEMANAL</TableCell>
+            <TableCell align="right">MIEMBROS APUNTADOS</TableCell>
+            <TableCell align="right">AÑADIR MIEMBRO</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -39,9 +39,9 @@ export default function ListMember() {
               <TableCell component="th" scope="row" style={{ width: '80px' }}>
                 {row.name}
               </TableCell>
-              <TableCell align="right">{row.lastname}</TableCell>
-              <TableCell align="right">{row.contact}</TableCell>
-              <TableCell align="right"><button className="buttonAddMember">Perfil</button></TableCell>
+              <TableCell align="right">{row.day}</TableCell>
+              <TableCell align="right">{row.members}</TableCell>
+              <TableCell align="right"><button className="buttonAddMember">Añadir Miembro</button></TableCell>
             </TableRow>
           ))}
         </TableBody>
