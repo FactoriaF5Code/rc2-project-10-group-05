@@ -1,7 +1,8 @@
+/* eslint-disable react/prop-types */
 import "./AddMembersModal.css";
 import cross from "../../assets/cross.png";
 
-export default function AddMembersModal(onClose) {
+export default function AddMembersModal({onClose}) {
   return (
     <>
       <section className="overlay">
