@@ -9,7 +9,7 @@ export default function AddMembersModal({ onClose }) {
   const [newMember, setNewMember] = useState({ name: "", lastName: "", contact: "" });
 
   const handlePost = () => {
-    postMember(newMember, URL);
+    postMember(URL, newMember);
     setNewMember({ name: "", lastName: "", contact: "" })
   };
 
