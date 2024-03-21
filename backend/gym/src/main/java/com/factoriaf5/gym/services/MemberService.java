@@ -1,5 +1,7 @@
 package com.factoriaf5.gym.services;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,5 +16,9 @@ public class MemberService {
 
     public Member save(Member member) {
         return memberRepository.save(member);
+    }
+
+    public List<Member> findAll() {
+        return memberRepository.findAll();
     }
 }

@@ -4,7 +4,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 const DataContext = createContext();
 
 export const DataProvider = ({ children }) => {
-  const [member, setmember] = useState([]);
+  const [member, setMember] = useState([]);
   const [needsReload, setNeedsReload] = useState(true);
   const URL = "http://localhost:8080/api/users";
 
@@ -13,7 +13,7 @@ export const DataProvider = ({ children }) => {
       const response = await fetch(URL);
       if (response.ok) {
         const data = await response.json();
-        setmember(data);
+        setMember(data);
         setNeedsReload(false);
       } else {
         console.error("Error al obtener datos");
@@ -40,7 +40,7 @@ export const DataProvider = ({ children }) => {
       const response = await fetch(URL, options);
 
       if (response.ok) {
-        setmember([]);
+        setMember([]);
         setNeedsReload(true);
         alert("Realizado con éxito");
       } else {
