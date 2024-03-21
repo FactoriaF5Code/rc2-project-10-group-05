@@ -31,7 +31,7 @@ export default function ListMember() {
               <TableCell component="th" scope="row" style={{ width: '80px' }}>
                 {member.name}
               </TableCell>
-              <TableCell align="right">{member.lastname}</TableCell>
+              <TableCell align="right">{member.lastName}</TableCell>
               <TableCell align="right">{member.contact}</TableCell>
               <TableCell align="right"><button className="buttonAddMember">Perfil</button></TableCell>
             </TableRow>
