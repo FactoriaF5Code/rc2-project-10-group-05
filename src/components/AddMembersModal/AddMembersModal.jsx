@@ -8,6 +8,14 @@ export default function AddMembersModal({ onClose }) {
   const { postMember, URL } = useDataContext();
   const [newMember, setNewMember] = useState({ name: "", lastName: "", contact: "" });
 
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setNewMember(prevState => ({
+      ...prevState,
+      [name]: value
+    }));
+  };
+
   const handlePost = () => {
     postMember(URL, newMember);
     setNewMember({ name: "", lastName: "", contact: "" })
@@ -28,13 +36,13 @@ export default function AddMembersModal({ onClose }) {
                 <p>AÑADIR MIEMBRO</p>
               </div>
               <div>
-                <input type="text" placeholder="Nombre" />
+                <input type="text" name="name" value={newMember.name} placeholder="Nombre" onChange={handleChange} />
               </div>
               <div>
-                <input type="text" placeholder="Apellido" />
+                <input type="text" name="lastName" value={newMember.lastName} placeholder="Apellido" onChange={handleChange} />
               </div>
               <div>
-                <input type="text" placeholder="Contacto" />
+                <input type="text" name="contact" value={newMember.contact} placeholder="Contacto" onChange={handleChange} />
               </div>
               <div>
                 <button className="finalizarButton" onClick={() => { onClose(); handlePost(); }}>FINALIZAR</button>

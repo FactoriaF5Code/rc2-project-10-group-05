@@ -6,19 +6,11 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-
-function createData(name, lastname, contact, perfil) {
-  return { name, lastname, contact, perfil };
-}
-
-const rows = [
-  createData('Oliver', 'Sanchez', '684656565', 4.0),
-  createData('Marta', 'Sanchez', '684456565', 4.0),
-  createData('David', 'Fernandez', '684656565', 4.0),
-  createData('Jorge', 'Perez', '6846s6565', 4.0),
-];
+import { useDataContext } from '../DataContext/DataContest';
 
 export default function ListMember() {
+ const { member } = useDataContext();
+
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
@@ -31,16 +23,16 @@ export default function ListMember() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
+          {member.map((member) => (
             <TableRow
-              key={row.name}
+              key={member.name}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
               <TableCell component="th" scope="row" style={{ width: '80px' }}>
-                {row.name}
+                {member.name}
               </TableCell>
-              <TableCell align="right">{row.lastname}</TableCell>
-              <TableCell align="right">{row.contact}</TableCell>
+              <TableCell align="right">{member.lastname}</TableCell>
+              <TableCell align="right">{member.contact}</TableCell>
               <TableCell align="right"><button className="buttonAddMember">Perfil</button></TableCell>
             </TableRow>
           ))}
