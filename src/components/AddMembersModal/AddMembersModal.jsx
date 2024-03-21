@@ -19,7 +19,7 @@ export default function AddMembersModal({ onClose }) {
         <section className="contenedorModal">
           <div className="contenedorModal__content">
             <div className="contenedorButton__cerrar">
-              <button className="cerrarModal" onClick={() => { onClose(); handlePost(); }}>
+              <button className="cerrarModal" onClick={() =>  onClose()}>
                 <img src={cross} alt="x" />
               </button>
             </div>
@@ -37,7 +37,7 @@ export default function AddMembersModal({ onClose }) {
                 <input type="text" placeholder="Contacto" />
               </div>
               <div>
-                <button className="finalizarButton">FINALIZAR</button>
+                <button className="finalizarButton" onClick={() => { onClose(); handlePost(); }}>FINALIZAR</button>
               </div>
             </div>
           </div>

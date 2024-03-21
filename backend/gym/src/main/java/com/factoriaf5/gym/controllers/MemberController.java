@@ -12,7 +12,7 @@ import com.factoriaf5.gym.services.MemberService;
 
 @CrossOrigin(origins = "http://localhost:5173")
 @RestController
-@RequestMapping ("api/users")
+@RequestMapping ("/api/users")
 public class MemberController {
     @Autowired
     private MemberService memberService;
