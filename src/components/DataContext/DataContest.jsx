@@ -1,7 +1,7 @@
 
 import { createContext, useContext, useEffect, useState } from "react";
 
-const DataContext = createContext;
+const DataContext = createContext();
 
 export const DataProvider = ({ children }) => {
   const [member, setmember] = useState([]);
