@@ -8,7 +8,7 @@ import { useDataContext } from "../../components/DataContext/DataContest";
 
 function HomePage() {
   const { alertMessage, alertSeverity, setAlertMessage } = useDataContext();
-
+  
   return (
     <>
       <div className="containerHomePage">

@@ -46,7 +46,7 @@ export const DataProviderActivity = ({ children }) => {
       if (response.ok) {
         setActivity([]);
         setNeedsReload(true);
-        setAlertMessage("Enhorabuena, Mario se ha registrado correctamente");
+        setAlertMessage(`Enhorabuena, ${newActivity.name} se ha registrado correctamente`);
         setAlertSeverity("success");
       } else {
         setAlertMessage("Error al realizar la operación");

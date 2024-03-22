@@ -44,7 +44,7 @@ export const DataProvider = ({ children }) => {
       if (response.ok) {
         setMember([]);
         setNeedsReload(true);
-        setAlertMessage("Enhorabuena, Mario se ha registrado correctamente");
+        setAlertMessage(`Enhorabuena, ${newMember.name} se ha registrado correctamente`);
         setAlertSeverity("success");
       } else {
         setAlertMessage("Error al realizar la operación");
@@ -54,9 +54,6 @@ export const DataProvider = ({ children }) => {
       console.error("Error de red", error);
     }
   };
-
- 
-
 
   const value = {
     postMember,
