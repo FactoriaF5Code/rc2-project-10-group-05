@@ -1,0 +1,21 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+}
+
+.containerCompletPage {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.page{
+  background-color: #E7E7E7;
+}
+
+
+

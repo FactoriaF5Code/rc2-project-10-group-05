@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "FuentePrincipal";
+    src: url("../../../public/HeliosRegular.ttf");
+  }
+
+  .titleColumns{
+    font-family: "FuentePrincipal", sans-serif;
+  }
+
