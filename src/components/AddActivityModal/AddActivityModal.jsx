@@ -1,28 +1,28 @@
 /* eslint-disable react/prop-types */
-import "./AddMembersModal.css";
-import cross from "../../assets/cross.png";
-import { useDataContext } from "../DataContext/DataContest";
 import { useState } from "react";
+import cross from "../../assets/cross.png";
+import { useDataContextActivity } from "../DataContext/DataContextActivity";
 
-export default function AddMembersModal({ onClose }) {
-  const { postMember, URL } = useDataContext();
-  const [newMember, setNewMember] = useState({
+export default function AddActivityModal({onClose}) {
+  const { postActivity, URL_ACTIVITY } = useDataContextActivity();
+
+  const [newActivity, setNewActivity] = useState({
     name: "",
-    lastName: "",
-    contact: "",
+    day: "",
+    max_member: "",
   });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setNewMember((prevState) => ({
+    setNewActivity((prevState) => ({
       ...prevState,
       [name]: value,
     }));
   };
 
   const handlePost = () => {
-    postMember(URL, newMember);
-    setNewMember({ name: "", lastName: "", contact: "" });
+    postActivity(URL_ACTIVITY, newActivity);
+    setNewActivity({ name: "", day: "", max_member: "" });
   };
 
   return (
@@ -37,13 +37,13 @@ export default function AddMembersModal({ onClose }) {
             </div>
             <div className="contenedorInformación">
               <div className="pAñadir">
-                <p>AÑADIR MIEMBRO</p>
+                <p>AÑADIR ACTIVIDAD</p>
               </div>
               <div>
                 <input
                   type="text"
                   name="name"
-                  value={newMember.name}
+                  value={newActivity.name}
                   placeholder="Nombre"
                   onChange={handleChange}
                 />
@@ -51,18 +51,18 @@ export default function AddMembersModal({ onClose }) {
               <div>
                 <input
                   type="text"
-                  name="lastName"
-                  value={newMember.lastName}
-                  placeholder="Apellido"
+                  name="day"
+                  value={newActivity.day}
+                  placeholder="Día"
                   onChange={handleChange}
                 />
               </div>
               <div>
                 <input
                   type="text"
-                  name="contact"
-                  value={newMember.contact}
-                  placeholder="Contacto"
+                  name="max_member"
+                  value={newActivity.max_member}
+                  placeholder="Máximo de miembros permitidos"
                   onChange={handleChange}
                 />
               </div>

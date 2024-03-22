@@ -1,21 +1,22 @@
 /* eslint-disable react/prop-types */
 import { createContext, useContext, useEffect, useState } from "react";
 
-const DataContext = createContext();
 
-export const DataProvider = ({ children }) => {
-  const [member, setMember] = useState([]);
+const DataContextActivity = createContext();
+
+export const DataProviderActivity = ({ children }) => {
+  const [activity, setActivity] = useState([]);
   const [needsReload, setNeedsReload] = useState(true);
   const [alertMessage, setAlertMessage] = useState("");
   const [alertSeverity, setAlertSeverity] = useState("");
-  const URL = "http://localhost:8080/api/users";
+  const URL_ACTIVITY = "http://localhost:8080/api/activities"
 
-  const fetchData = async (URL) => {
+  const fetchDataActivity = async (URL_ACTIVITY) => {
     try {
-      const response = await fetch(URL);
+      const response = await fetch(URL_ACTIVITY);
       if (response.ok) {
         const data = await response.json();
-        setMember(data);
+        setActivity(data);
         setNeedsReload(false);
       } else {
         console.error("Error al obtener datos");
@@ -27,22 +28,23 @@ export const DataProvider = ({ children }) => {
 
   useEffect(() => {
     if (needsReload) {
-      fetchData(URL);
+      fetchDataActivity(URL_ACTIVITY);
     }
   }, [needsReload]);
 
-  const postMember = async (URL, newMember) => {
+ 
+  const postActivity = async (URL_ACTIVITY, newActivity) => {
     try {
       const options = {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(newMember),
+        body: JSON.stringify(newActivity),
       };
 
-      const response = await fetch(URL, options);
+      const response = await fetch(URL_ACTIVITY, options);
 
       if (response.ok) {
-        setMember([]);
+        setActivity([]);
         setNeedsReload(true);
         setAlertMessage("Enhorabuena, Mario se ha registrado correctamente");
         setAlertSeverity("success");
@@ -55,21 +57,19 @@ export const DataProvider = ({ children }) => {
     }
   };
 
- 
-
-
   const value = {
-    postMember,
-    member,
+    postActivity,
+    activity,
     URL,
     alertSeverity,
     alertMessage,
     setAlertMessage,
+    URL_ACTIVITY
   };
 
-  return <DataContext.Provider value={value}>{children}</DataContext.Provider>;
+  return <DataContextActivity.Provider value={value}>{children}</DataContextActivity.Provider>;
 };
 
-export const useDataContext = () => {
-  return useContext(DataContext);
+export const useDataContextActivity = () => {
+  return useContext(DataContextActivity);
 };

@@ -6,19 +6,12 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import { useDataContextActivity } from '../DataContext/DataContextActivity';
 
-function createData(name, day, members, check) {
-  return { name, day, members, check };
-}
+export default function ActivitiesListTable() {
+  
+  const { activity } = useDataContextActivity();
 
-const rows = [
-  createData('Pilates', 'Lunes', 8, 4.0),
-  createData('Spinning', 'Martes', 5, 4.0),
-  createData('CrossFit', 'Miercoles y Viernes', 10, 4.0),
-  createData('Yoga', 'Jueves', 1, 4.0),
-];
-
-export default function ListMember() {
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
@@ -31,16 +24,16 @@ export default function ListMember() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
+          {activity.map((activity) => (
             <TableRow
-              key={row.name}
+              key={activity.name}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
               <TableCell component="th" scope="row" style={{ width: '80px' }}>
-                {row.name}
+                {activity.name}
               </TableCell>
-              <TableCell align="right">{row.day}</TableCell>
-              <TableCell align="right">{row.members}</TableCell>
+              <TableCell align="right">{activity.day}</TableCell>
+              <TableCell align="right">{activity.max_member}</TableCell>
               <TableCell align="right"><button className="buttonAddMember">Añadir Miembro</button></TableCell>
             </TableRow>
           ))}
